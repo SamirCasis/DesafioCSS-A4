@@ -2,10 +2,10 @@ body {
     display: grid;
     margin: 0;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1 fr 10fr 1fr;
+    grid-template-rows: 1fr 1fr 6fr 1fr;
     grid-template-areas:
         "header"
-        "section"
+        "article"
         "main"
         "footer";
 }
@@ -38,7 +38,7 @@ header {
 .container-fluid {
     padding: 0;
     border-radius: 5px;
-text-align: center;
+    text-align: center;
 }
 
 .navbar button {
@@ -66,16 +66,27 @@ text-align: center;
 
 main {
     grid-area: main;
-    min-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-#oferta {
+.oferta2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    max-height: 400px;
+    max-height: 380px;
     overflow-y: scroll;
+}
+
+.oferta2 img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.oferta2 img:hover {
+    filter: grayscale(0%);
 }
 
 .producto {
@@ -95,18 +106,15 @@ main {
     margin-bottom: 15px;
 }
 
-
-.páginas {
+.paginas {
     justify-content: center;
     text-align: center;
     color: white;
     padding: 10px 10px;
     margin: 20px 5px;
-    
-
 }
 
-.páginas a {
+.paginas a {
     color: blue;
     padding: 10px;
     border: solid rgb(206, 206, 206) 1px;
@@ -125,7 +133,7 @@ footer {
     display: flex;
     gap: 10px;
     color: white;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .iconosfoot i {
@@ -146,25 +154,26 @@ footer {
             "header section"
             "header main"
             "footer main";
-        min-height: 100vh;
     }
 
     header {
         display: flex;
         flex-direction: column;
-     }
-    
-.textoheader {
-    text-align: start;
-}
+    }
 
-.navbar {
-    display: none;
-}
+    .textoheader {
+        margin-left: 20px;
+        margin-bottom: 100px;
+        font-size: x-large;
+        transition: color 0.3s ease-in-out;
+    }
 
-    main {
-        display: flex;
-        flex-direction: column;
+    .textoheader:hover {
+        color: orange;
+    }
+
+    .navbar {
+        display: none;
     }
 
     .botongrupal {
@@ -172,27 +181,32 @@ footer {
     }
 
     .menu {
-        display:block;
+        display: block;
+        margin-bottom: 100px;
     }
 
     .menu li {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        transform: rotate(320deg)
     }
 
-    .oferta {
+    .menu a {
+        text-decoration: none;
+    }
+
+
+    .oferta2 {
         display: grid;
         grid-template-columns: auto auto auto auto;
         max-height: 530px;
-        margin: 20px;
+        margin: 20px 20px 40px 20px;
         gap: 10px;
     }
 
-    .páginas {
-        align-items: flex-start;
+    .paginas {
+        margin-top: 30px;
     }
 
-   
-   
     footer {
         text-align: center;
         justify-content: center;
