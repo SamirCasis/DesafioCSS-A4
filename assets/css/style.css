@@ -5,55 +5,58 @@ body {
     grid-template-rows: 1fr 1 fr 10fr 1fr;
     grid-template-areas:
         "header"
-        "nav"
+        "section"
         "main"
         "footer";
 }
 
 header {
     grid-area: header;
-    background-color: rgb(2, 66, 161);
     display: flex;
-    flex-direction: column;
+    background-color: rgb(2, 66, 161);
+    font-size: 20px;
+    margin-top: 0;
+    justify-content: space-around;
 }
 
 .textoheader {
     display: flex;
+    margin-left: 5px;
     align-items: center;
+    color: white;
     gap: 10px;
-    margin-left: 20px;
-    color: white;
-    font-size: 20px;
 }
 
-.botongrupal {
-    margin-right: 20px;
-    color: white;
-    font-size: x-large;
+.textoheader p {
+    margin: 0;
 }
 
-#menu {
+.textoheader i {
+    color: white;
+}
+
+.container-fluid {
+    padding: 0;
+    border-radius: 5px;
+text-align: center;
+}
+
+.navbar button {
+    background-color: white;
+}
+
+#inicio a {
+    color: white;
+}
+
+.menu {
     display: none;
-    color: white;
 }
 
-#menu li {
-    margin-bottom: 10px;
-}
-
-nav {
-    grid-area: nav;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-    background-color: rgba(225, 238, 240, 0.547);
-    padding-bottom: 10px;
-}
-
-nav p {
-    color: black;
-    margin-bottom: 5px;
+#buscador {
+    background-color: rgb(230, 230, 227);
+    padding: 10px;
+    text-align: center;
 }
 
 .filtro {
@@ -66,7 +69,7 @@ main {
     min-height: fit-content;
 }
 
-.oferta {
+#oferta {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,6 +85,7 @@ main {
     margin-bottom: 30px;
 }
 
+
 .producto button {
     padding: 10px;
     width: 40%;
@@ -91,12 +95,14 @@ main {
     margin-bottom: 15px;
 }
 
+
 .páginas {
     justify-content: center;
     text-align: center;
     color: white;
     padding: 10px 10px;
     margin: 20px 5px;
+    
 
 }
 
@@ -137,7 +143,7 @@ footer {
         grid-template-columns: 1fr 7fr;
         grid-template-rows: 1fr 6fr 1fr;
         grid-template-areas:
-            "header nav"
+            "header section"
             "header main"
             "footer main";
         min-height: 100vh;
@@ -146,23 +152,31 @@ footer {
     header {
         display: flex;
         flex-direction: column;
-        align-items: start;
-    }
+     }
+    
+.textoheader {
+    text-align: start;
+}
 
-    .textoheader {
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-
-    #menu {
-        display: block;
-    }
+.navbar {
+    display: none;
+}
 
     main {
         display: flex;
         flex-direction: column;
+    }
+
+    .botongrupal {
+        display: none;
+    }
+
+    .menu {
+        display:block;
+    }
+
+    .menu li {
+        margin-bottom: 20px;
     }
 
     .oferta {
@@ -173,16 +187,12 @@ footer {
         gap: 10px;
     }
 
-
-
     .páginas {
         align-items: flex-start;
     }
 
-    .botongrupal {
-        display: none;
-    }
-
+   
+   
     footer {
         text-align: center;
         justify-content: center;
